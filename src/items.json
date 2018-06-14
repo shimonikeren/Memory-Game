@@ -1,84 +1,72 @@
 [
     {
       "id": 1,
-      "key": 1,
       "name": "Flamingo",
       "image": "https://images.unsplash.com/photo-1497206365907-f5e630693df0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4ae894b5e5b808211ca74e52a9496258&auto=format&fit=crop&w=800&q=80",
       "clicked": false
     },
     {
       "id": 2,
-      "key": 2,
       "name": "Fox",
       "image": "https://images.unsplash.com/photo-1462953491269-9aff00919695?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e2dea8d19793b1474b4c4962a98f0b47&auto=format&fit=crop&w=1234&q=80",
       "clicked": false
     },
     {
       "id": 3,
-      "key": 3,
       "name": "Ape",
       "image": "https://images.unsplash.com/photo-1445583934509-4ad5ffe6ef08?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f8a3de53242b4c585c8ccf2037dd5b8d&auto=format&fit=crop&w=1050&q=80",
       "clicked": false
     },
     {
       "id": 4,
-      "key": 4,
       "name": "Giraffe",
       "image": "https://images.unsplash.com/photo-1496963729609-7d408fa580b5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=08b4a1080fb625e001a410a9ec1e34b9&auto=format&fit=crop&w=1051&q=80",
       "clicked": false
     },
     {
       "id": 5,
-      "key": 5,
       "name": "Cow",
       "image": "https://images.unsplash.com/photo-1506809218242-9bf49dd91758?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b4d7f6116736faa22d5945849665e259&auto=format&fit=crop&w=633&q=80",
       "clicked": false
     },
     {
       "id": 6,
-      "key": 6,
       "name": "Horse",
       "image": "https://images.unsplash.com/photo-1450052590821-8bf91254a353?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5cdb77055328f91528e6f346aa6c8826&auto=format&fit=crop&w=1189&q=80",
       "clicked": false
     },
     {
       "id": 7,
-      "key": 7,
       "name": "Pig",
       "image": "https://images.unsplash.com/photo-1495890467381-2eba2c4c48b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=524933d83c0003915c7d4f5482a6712c&auto=format&fit=crop&w=400&q=60",
       "clicked": false
     },
     {
       "id": 8,
-      "key": 8,
       "name": "Squirel",
       "image": "https://images.unsplash.com/photo-1476293602671-beea27e1e702?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4a53565154f25157b6717b09c4904321&auto=format&fit=crop&w=400&q=60",
       "clicked": false
     },
     {
       "id": 9,
-      "key": 9,
       "name": "Cheetah",
       "image": "https://images.unsplash.com/photo-1497899236524-c79659901d7c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e057616496a8dbe400f8a1accd01b2e6&auto=format&fit=crop&w=1350&q=80",
       "clicked": false
     },
     {
       "id": 10,
-      "key": 10,
       "name": "Fish",
       "image": "https://images.unsplash.com/photo-1517009988936-bfaf7497092e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=faa8e94fcd494b416d9362664454cb34&auto=format&fit=crop&w=1071&q=80",
       "clicked": false
     },
     {
       "id": 11,
-      "key": 11,
       "name": "Iguana",
       "image": "https://images.unsplash.com/photo-1455531838570-03ecb37d3b0b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6c68242cff03f59684bc69d5223d29f2&auto=format&fit=crop&w=1050&q=80",
       "clicked": false
     },
     {
       "id": 12,
-      "key": 12,
       "name": "Kangaroo",
       "image": "https://images.unsplash.com/photo-1527083415169-6deea810d6cf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aa5f3b7787c060f942e7237e014ae49a&auto=format&fit=crop&w=400&q=60",
       "clicked": false
