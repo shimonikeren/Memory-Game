@@ -1,3 +1,5 @@
+Note: I am currently working on this app, it is not yet complete. I have one feature to code remaining. The information below describes the intention for the final product. 
+
 # Memory Game
 
 **Link to App Demo** 
@@ -12,6 +14,8 @@ This is a react.js app that uses react.js for the frontend UI, and javascript ES
 - ES6, JavaScript
 - HTML
 - CSS
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

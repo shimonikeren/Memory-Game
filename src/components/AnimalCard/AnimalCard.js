@@ -12,7 +12,7 @@ class AnimalCard extends React.Component {
     let items = this.shuffleArray(this.state.items);
     this.setState({ items });
     
-    //logic for counting points/streaks goes here 
+    //logic for counting points/streaks will go here 
 
   }
 
