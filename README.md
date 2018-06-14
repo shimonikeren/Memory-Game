@@ -1,8 +1,5 @@
 # Memory Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-
 **Link to App Demo** 
 [Click Here](#)
 
@@ -17,4 +14,4 @@ This is a react.js app that uses react.js for the frontend UI, and javascript ES
 - CSS
 
 
-test
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
