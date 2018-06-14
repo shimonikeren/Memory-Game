@@ -24,14 +24,12 @@ class AnimalCard extends React.Component {
     } return items;  
 }
 
-
-
   render() {
       return (
         <div className="container">
           <div className="row justify-content-md-center">
             {this.state.items.map(item => (
-              //when handleClick is called below with this.handlecClick, the this is null, therefore, use the arrow function to tie the this to the function
+              //when handleClick is called below with this.handlecClick, the 'this' is null, therefore, use the arrow function to tie the 'this' to the function
               //exaplined at: https://reactarmory.com/answers/when-to-use-arrow-functions
               <div className="col-sm-3 outerDiv" onClick={() => this.handleClick(item.id)} key={item.id}>
                 <img className="animalImages" src={item.image} alt={item.name}/>
@@ -41,7 +39,5 @@ class AnimalCard extends React.Component {
       )
     }
 };
-
-
 
 export default AnimalCard;

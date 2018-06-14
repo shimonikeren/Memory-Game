@@ -6,9 +6,6 @@ import Jumbo from "./components/Jumbo";
  
 
 class App extends Component {
-  //logic will go here 
-
-  // Map over this.state.items and render item component for each friend object
   render() {
     return (
       <div>
