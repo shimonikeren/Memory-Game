@@ -17,5 +17,4 @@ This is a react.js app that uses react.js for the frontend UI, and javascript ES
 
 
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
