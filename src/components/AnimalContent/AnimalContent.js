@@ -26,8 +26,8 @@ class AnimalCard extends React.Component {
                     this.state.topScoreArray.push(this.state.clickStreak);
                     console.log("topscore array: " + this.state.topScoreArray);
                     this.setState({topScore: (Math.max(...this.state.topScoreArray)), topScoreArray: this.state.topScoreArray});  //something weird happening here?!
-                    console.log("set state topScore:" + (Math.max(...this.state.topScoreArray))); 
-                    console.log(this.state.topScore); //why printing out one first time. and then correct number second time?
+                    console.log("topScore:" + (Math.max(...this.state.topScoreArray))); 
+                    console.log("set state topScore:" + this.state.topScore); //why printing out one first time. and then correct number second time?
                     console.log("set state topScoreArray:" + this.state.topScoreArray);
                    //reset state of clickStreak and clickedArray
                   //keep state of topScoreArray to continue getting topScore 
