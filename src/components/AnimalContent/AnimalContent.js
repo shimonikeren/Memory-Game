@@ -11,23 +11,29 @@ class AnimalCard extends React.Component {
     topScoreArray: []
   };
 
+
+    //TODO LOGIC:
+    //reset function to be called when:
+    //1. clicked more than once!
+
+
+
   handleClick(item){
     //when item clicked, shuffle all items 
     let items = this.shuffleArray(this.state.items);
     this.setState({ items });
 
-    //logic for counting points/streaks will go here 
+    //logic for counting clicks, clickstreak, topscore 
     //WHENEVER an item clicked do the following: 
     //check clickStreakArray to determine if its already been clicked 
-
         if (this.state.clickedArray.includes(item.name)){
           console.log("includes:" + item.name);
                 if ((this.state.clickStreak) > (Math.max(...this.state.topScoreArray))){
-                    console.log(this.state.clickStreak + "is new top score");
+                    console.log(this.state.clickStreak + " is new top score");
                     this.state.topScoreArray.push(this.state.clickStreak);
                     console.log("topscore array: " + this.state.topScoreArray);
-                    // this.setState({topScore: this.state.clickStreak, topScoreArray: this.state.topScoreArray});
-                    
+                    this.setState({topScore: this.state.clickStreak, topScoreArray: this.state.topScoreArray});  //something weird happening here?!
+                    console.log("set state topScore:" + (Math.max(...this.state.topScoreArray)));
                 }
                 else {
                   console.log("old topscore remains: " + (Math.max(...this.state.topScoreArray)));
