@@ -11,13 +11,6 @@ class AnimalCard extends React.Component {
     topScoreArray: []
   };
 
-
-    //TODO LOGIC:
-    //reset function to be called when:
-    //1. clicked more than once!
-
-
-
   handleClick(item){
     //when item clicked, shuffle all items 
     let items = this.shuffleArray(this.state.items);
@@ -32,16 +25,18 @@ class AnimalCard extends React.Component {
                     console.log(this.state.clickStreak + " is new top score");
                     this.state.topScoreArray.push(this.state.clickStreak);
                     console.log("topscore array: " + this.state.topScoreArray);
-                    this.setState({topScore: this.state.clickStreak, topScoreArray: this.state.topScoreArray});  //something weird happening here?!
-                    console.log("set state topScore:" + (Math.max(...this.state.topScoreArray)));
+                    this.setState({topScore: (Math.max(...this.state.topScoreArray)), topScoreArray: this.state.topScoreArray});  //something weird happening here?!
+                    console.log("set state topScore:" + (Math.max(...this.state.topScoreArray))); 
+                    console.log(this.state.topScore); //why printing out one first time. and then correct number second time?
+                    console.log("set state topScoreArray:" + this.state.topScoreArray);
+                   //reset state of clickStreak and clickedArray
+                  //keep state of topScoreArray to continue getting topScore 
                 }
                 else {
                   console.log("old topscore remains: " + (Math.max(...this.state.topScoreArray)));
+                  //reset state of clickStreak and clickedArray
+                  //keep state of topScoreArray to continue getting topScore 
                 }
-          //compare clickStreak to topScore array 
-              //if clickStreak > any # in topScore array-->push to topScore array and update topScore 
-          this.setState({clickStreak: 1, clickedArray:[]});
-          console.log(this.state);
 
         }
         else {
