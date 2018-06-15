@@ -7,7 +7,7 @@ class AnimalCard extends React.Component {
     items,
     clickStreak: 1,
     topScore: 1,
-    clickStreakArray: [],
+    clickedArray: [],
     topScoreArray: []
   };
 
@@ -20,30 +20,29 @@ class AnimalCard extends React.Component {
     //WHENEVER an item clicked do the following: 
     //check clickStreakArray to determine if its already been clicked 
 
-        if (this.state.clickStreakArray.includes(item.name)){
+        if (this.state.clickedArray.includes(item.name)){
           console.log("includes:" + item.name);
-                if ((this.state.clickStreak) > (Math.max(...this.state.clickStreakArray))){
+                if ((this.state.clickStreak) > (Math.max(...this.state.topScoreArray))){
                     console.log(this.state.clickStreak + "is new top score");
-                    this.topScoreArray.push(this.state.clickStreak);
-                    this.setState({topScore: this.state.clickStreak, topScoreArray: this.state.topScoreArray});
+                    this.state.topScoreArray.push(this.state.clickStreak);
+                    console.log("topscore array: " + this.state.topScoreArray);
+                    // this.setState({topScore: this.state.clickStreak, topScoreArray: this.state.topScoreArray});
+                    
                 }
                 else {
                   console.log("old topscore remains: " + (Math.max(...this.state.topScoreArray)));
                 }
           //compare clickStreak to topScore array 
               //if clickStreak > any # in topScore array-->push to topScore array and update topScore 
-          this.setState({clickStreak: 1, clickStreakArray:[]});
+          this.setState({clickStreak: 1, clickedArray:[]});
           console.log(this.state);
 
         }
         else {
-          console.log("no");
-          this.state.clickStreakArray.push(item.name);
-          this.setState({clickStreak: this.state.clickStreak+1, clickStreakArray: this.state.clickStreakArray});
-          console.log("array:" + this.state.clickStreakArray);
+          this.state.clickedArray.push(item.name); 
+          this.setState({clickStreak: this.state.clickStreak+1, clickedArray: this.state.clickedArray});
+          console.log("clickedArray:" + this.state.clickedArray);
           console.log("clickStreak:" + this.state.clickStreak);
-          //add +1 to clickStreak
-            //add item to clickStreakArray 
         }           
     
   }
