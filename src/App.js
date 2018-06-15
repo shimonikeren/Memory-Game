@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import AnimalCard from "./components/AnimalCard";
+import AnimalCard from "./components/AnimalContent";
 import Header from "./components/Header";
 import Jumbo from "./components/Jumbo";
  
