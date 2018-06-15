@@ -5,57 +5,45 @@ import items from "../../items.json";
 class AnimalCard extends React.Component {
   state = {
     items,
-    clickStreak: 1,
+    currentScore: 1,
     topScore: 1,
     clickedArray: [],
     topScoreArray: []
   };
+
+    shuffleArray(items) {
+      const newItems = items.slice();
+      for (let i = newItems.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newItems[i], newItems[j]] = [newItems[j], newItems[i]]; 
+      } return newItems;  
+    }
+
 
   handleClick(item){
     //when item clicked, shuffle all items 
     let items = this.shuffleArray(this.state.items);
     this.setState({ items });
 
-    //logic for counting clicks, clickstreak, topscore 
-    //WHENEVER an item clicked do the following: 
-    //check clickStreakArray to determine if its already been clicked 
-        if (this.state.clickedArray.includes(item.name)){
-          console.log("includes:" + item.name);
-                if ((this.state.clickStreak) > (Math.max(...this.state.topScoreArray))){
-                    console.log(this.state.clickStreak + " is new top score");
-                    this.state.topScoreArray.push(this.state.clickStreak);
-                    console.log("topscore array: " + this.state.topScoreArray);
-                    this.setState({topScore: (Math.max(...this.state.topScoreArray)), topScoreArray: this.state.topScoreArray});  //something weird happening here?!
-                    console.log("topScore:" + (Math.max(...this.state.topScoreArray))); 
-                    console.log("set state topScore:" + this.state.topScore); //why printing out one first time. and then correct number second time?
-                    console.log("set state topScoreArray:" + this.state.topScoreArray);
-                   //reset state of clickStreak and clickedArray
-                  //keep state of topScoreArray to continue getting topScore 
-                }
-                else {
-                  console.log("old topscore remains: " + (Math.max(...this.state.topScoreArray)));
-                  //reset state of clickStreak and clickedArray
-                  //keep state of topScoreArray to continue getting topScore 
-                }
-
+    //click logic
+        if (this.state.clickedArray.includes(item.name)){ 
+          console.log("stop adding points. array includes:" + item.name); //then evaluate current score vs topscore
+          this.state.topScoreArray.push((this.state.clickedArray.length));
+          const highestScore = (Math.max(...this.state.topScoreArray));
+          this.setState({ 
+            currentScore: this.state.clickedArray.length, 
+            clickedArray: [], 
+            topScore: highestScore,
+            topScoreArray: this.state.topScoreArray }, () => {
+            console.log(this.state);
+          }); 
         }
-        else {
+        else { //item not yet clicked, keep playing 
           this.state.clickedArray.push(item.name); 
-          this.setState({clickStreak: this.state.clickStreak+1, clickedArray: this.state.clickedArray});
+          this.setState({clickedArray: this.state.clickedArray});
           console.log("clickedArray:" + this.state.clickedArray);
-          console.log("clickStreak:" + this.state.clickStreak);
-        }           
-    
+        }
   }
-
-  //using shuffle with es6: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-  shuffleArray(items) {
-    const newItems = items.slice();
-    for (let i = newItems.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newItems[i], newItems[j]] = [newItems[j], newItems[i]]; // eslint-disable-line no-param-reassign
-    } return newItems;  
-}
 
   render() {
       return (
