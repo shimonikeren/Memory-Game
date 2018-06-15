@@ -9,7 +9,7 @@ const Header = props =>
 
 
         {/*game logic for points will go here...*/}
-        <a className="nav-item">Score: 0 | Top Score: 0</a>
+        <a className="nav-item">Score: {props.score} | Top Score: {props.top}</a>
     </nav>);
 
 export default Header;
